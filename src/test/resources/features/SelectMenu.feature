@@ -3,7 +3,7 @@ Feature: SelectMenu
 
   @selectmenu
   Scenario: select menu at demo qa
-    Given User go to "https://demoqa.com/select-menu"
+    Given User go to "selectmenu"
     When User in “select menu” page
     And User choose select value “Another root option”
     And User choose select one “Other”

@@ -14,12 +14,21 @@ public class BookStorePage {
     @FindBy(id = "searchBox")
     public WebElement searchBoxField;
 
-    @FindBy(class = "main-header")
+    @FindBy(css = ".main-header")
     public WebElement bookStoreHeader;
 
-    @FindBy(class = "rt-noData")
+    @FindBy(css = ".rt-noData")
     public WebElement noDataFoundWording;
 
     @FindBy(id = "see-book-Git Pocket Guide")
-    public WebElement gitPockerGuideTittleButton;
+    public WebElement gitPocketGuideTittleButton;
+
+    @FindBy(xpath = "//*[contains(text(), 'Git Pocket Guide')]")
+    public WebElement gitPocketGuideTittleText;
+
+    @FindBy(xpath = "//*[contains(text(), 'Richard E. Silverman')]")
+    public WebElement gitPocketGuideAuthorText;
+
+    @FindBy(xpath = "//*[contains(text(),  \"O'Reilly Media\")]")
+    public WebElement gitPocketGuidePublisherText;
 }
