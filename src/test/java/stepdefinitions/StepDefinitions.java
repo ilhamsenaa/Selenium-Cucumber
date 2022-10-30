@@ -135,18 +135,27 @@ public class StepDefinitions {
     public void User_success_input_all_select_menu() {
         SelectMenuPage selectMenuPage = new SelectMenuPage(driver);
 
-        // String selectedValueOptionDropdown = selectMenuPage.selectValueDropdownField.getAttribute("value");
-        // Assert.assertEquals("Another root option", selectedValueOptionDropdown);
+        Boolean selectedValueOptionDropdown = selectMenuPage.SelectOptionDropdown("Another root option", this.driver).isDisplayed();
+        Assert.assertEquals(true, selectedValueOptionDropdown);
 
-        // String selectOneOptionDropdown = selectMenuPage.SelectOptionDropdown("Other", this.driver).getText();
-        // Assert.assertEquals("Other", selectOneOptionDropdown);
+        Boolean selectedOneOptionDropdown = selectMenuPage.SelectOptionDropdown("Other", this.driver).isDisplayed();
+        Assert.assertEquals(true, selectedOneOptionDropdown);
 
         Select selectedOldMenu = new Select(selectMenuPage.oldMenuSelectDropdownField);
-        String oldSelectOptionDropdown = selectedOldMenu.getFirstSelectedOption().getText();
-        Assert.assertEquals("Aqua", oldSelectOptionDropdown);
+        String oldSelectedOptionDropdown = selectedOldMenu.getFirstSelectedOption().getText();
+        Assert.assertEquals("Aqua", oldSelectedOptionDropdown);
         
-        // String selectMultiOptionDropdown = selectMenuPage.multiSelectDropdownField.getText();
-        // Assert.assertEquals("Other", selectMultiOptionDropdown);
+        Boolean selectedMultiOptionDropdown = selectMenuPage.SelectOptionDropdown("Green", this.driver).isDisplayed();
+        Assert.assertEquals(true, selectedMultiOptionDropdown);
+
+        selectedMultiOptionDropdown = selectMenuPage.SelectOptionDropdown("Blue", this.driver).isDisplayed();
+        Assert.assertEquals(true, selectedMultiOptionDropdown);
+
+        selectedMultiOptionDropdown = selectMenuPage.SelectOptionDropdown("Black", this.driver).isDisplayed();
+        Assert.assertEquals(true, selectedMultiOptionDropdown);
+
+        selectedMultiOptionDropdown = selectMenuPage.SelectOptionDropdown("Red", this.driver).isDisplayed();
+        Assert.assertEquals(true, selectedMultiOptionDropdown);
     }
 
     @When("User in “Book Store” page")
