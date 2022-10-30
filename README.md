@@ -1,10 +1,15 @@
 # Selenium-Cucumber boilerplate
 
-A demo project using Selenium and Cucumber for browser automation, including several feature files, scenario's and step definitions. 
-This project can be used as a boilerplate for your own project!
-
-
 ### Install
+
+Visit the Maven download page and download the version of Maven you want to install.
+
+Add MAVEN_HOME System Variable
+
+Add MAVEN_HOME Directory in PATH Variable
+
+Verify Maven Installation
+
 ##### After checkout:
 
 Download the version of Chromedriver matching your version of Google Chrome. Usually this is the latests version of chromedriver. 
@@ -14,6 +19,8 @@ Run the project using the command line with:
 
 ```
 mvn clean test
+
+run with a tag : mvn clean test -Dcucumber.filter.tags="@exampleFeature"
 ```
 
 
