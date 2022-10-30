@@ -37,5 +37,5 @@ public class SelectMenuPage {
     public WebElement selectMenuHeader;
 
     @FindBy(css = ".css-1rhbuit-multiValue")
-    public WebElement selectedMultiValue;
+    public WebElement selectedMultiValueGreen;
 }
