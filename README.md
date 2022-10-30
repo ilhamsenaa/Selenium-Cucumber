@@ -20,7 +20,7 @@ Run the project using the command line with:
 ```
 mvn clean test
 
-run with a tag : mvn clean test -Dcucumber.filter.tags="@exampleFeature"
+run with a tag : mvn clean test -Dcucumber.filter.tags="@searchBookFeature"
 ```
 
 
