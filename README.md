@@ -17,10 +17,22 @@ Replace the current chromedriver in the project with the new version.
 
 Run the project using the command line with:
 
+
+How to run All UI autoamtion test
 ```
 mvn clean test
-
-run with a tag : mvn clean test -Dcucumber.filter.tags="@searchBookFeature"
+```
+How to run UI automation test for select menu Demo QA
+```
+mvn clean test -Dcucumber.filter.tags="@searchBookFeature"
+```
+How to run UI automation test for search Qa engineer book on Demo QA
+```
+mvn clean test -Dcucumber.filter.tags="@searchQaEngineerBook"
+```
+How to run UI automation test for search Git Pocket Guide book on Demo QA
+```
+mvn clean test -Dcucumber.filter.tags="@searchGitPocketGuideBook"
 ```
 
 
